@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190831123038) do
+ActiveRecord::Schema.define(version: 20190831123655) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "market_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "comment",    limit: 65535, null: false
+    t.integer  "user_id"
+    t.integer  "market_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["market_id"], name: "index_market_comments_on_market_id", using: :btree
+    t.index ["user_id"], name: "index_market_comments_on_user_id", using: :btree
   end
 
   create_table "markets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -49,6 +59,8 @@ ActiveRecord::Schema.define(version: 20190831123038) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "market_comments", "markets"
+  add_foreign_key "market_comments", "users"
   add_foreign_key "markets", "prefectures"
   add_foreign_key "prefectures", "areas"
 end

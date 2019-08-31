@@ -1,0 +1,2 @@
+class MarketComment < ApplicationRecord
+end
