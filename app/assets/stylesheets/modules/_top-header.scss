@@ -1,0 +1,59 @@
+.header{
+  height: 65px;
+  width: 100%;
+  background-image:url(http://www.netyasun.com/home/bk-img/b005.gif);
+  .l-header__left{
+    margin: 9px 100px;
+    float: left;
+    .header_logo{
+      font-family: 'Londrina Shadow', cursive;
+      font-size: 40px;
+      float: left;
+      margin: 0px 600px 0px 70px;
+    }
+  }
+  .l-header__right{
+    padding: 6px 30px;
+    float: right;
+    border-radius: 4px;
+    background-color:#20b2aa;
+    box-shadow: 0 4px 0 #047c71, 0 8px 0 rgba(0,0,0,.2);
+    transition: color .3s, background .3s, box-shadow .3s, transform 0.5s;
+    &:hover{
+      background: #3cc4bd;
+	    box-shadow: 0 3px 0 #12978d, 0 6px 0 rgba(0,0,0,.2);
+      transform: translateY(3px);
+    }
+    &:active{
+      color: #ddd;
+      background: #12978d;
+      box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+      transform: translateY(6px);
+      transition-duration: .1s;
+    }
+    a{
+      color: black;
+      display: inline-block;
+      opacity: 0.9;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'Londrina Shadow', cursive;
+    }
+  }
+  .l-header__nickname{
+    float: right;
+    margin-top: 10px;
+    .user__info{
+      float: right;
+      margin: 0px 0px 0px 30px;
+      .logout{
+        padding: 6px 30px;
+        float: right;
+        border-radius: 4px;
+        background-color:#95FECD;
+        text-decoration: none;
+        color: #0000FA;
+      }
+    }
+  }
+}

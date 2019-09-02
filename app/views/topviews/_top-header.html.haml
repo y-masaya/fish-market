@@ -1,0 +1,13 @@
+.header
+  .l-header__left
+    .header-conteiner
+      .header_logo Fish Eat
+      -if user_signed_in?
+        .l-header__nickname
+          = current_user.nickname
+          %ul.user__info
+            %li
+              =link_to 'ログアウト',destroy_user_session_path,class:"logout",method: :delete
+      -else
+        .l-header__right
+          =link_to 'Membership site', "/users/sign_in",class:"facebook"
