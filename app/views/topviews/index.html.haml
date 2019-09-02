@@ -1,0 +1,87 @@
+= render 'topviews/top-header'
+.main
+  .main__body.clearfix
+    .main-image 
+      %h1 A Japanese fish to you
+      %p 日本各地の魚に関する情報を配信します
+      %div.btn-wrapper
+        =link_to '新規登録はこちら','',class:"signup"
+        %p or sign up with
+        =link_to 'Facebookで登録', "#",class:"facebook"
+        =link_to 'Twitterで登録', "#" ,class:"twitter"
+    .contents
+      %li
+        =link_to '' do
+          %div.plan-season-list__thum
+            = image_tag 'recipe.png'
+          %div.plan-season-list-body お魚レシピ
+      %li
+        =link_to '' do
+          %div.plan-season-list__thum
+            = image_tag 'fish.png'
+          %div.plan-season-list-body 新鮮魚を買おう
+      %li
+        =link_to '' do
+          %div.plan-season-list__thum
+            = image_tag 'souvenir.png'
+          %div.plan-season-list-body.up  全国のお土産
+      %li
+        =link_to '' do
+          %div.plan-season-list__thum.up
+            = image_tag 'event.png'
+          %div.plan-season-list-body.up イベント情報
+    .area-navi
+      %div#map
+        %p Area Information
+    .article 
+      .article-list
+        %h2.has-icon
+          新着レシピ
+          =fa_icon "pencil-square-o", class: 'icon'
+        .content
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'recipe1.png'
+              %div.plan-season-list-body お魚レシピ
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'recipe2.png'
+              %div.plan-season-list-body お魚レシピ
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'recipe3.png'
+              %div.plan-season-list-body お魚レシピ
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'recipe4.png'
+              %div.plan-season-list-body お魚レシピ
+      .article-list
+        %h2.has-icon
+          新着イベント
+          =fa_icon "check-circle", class: 'icon'
+        .content
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'event.jpg'
+              %div.plan-season-list-body お魚レシピ
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'event2.jpeg'
+              %div.plan-season-list-body お魚レシピ
+          %li
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'event3.jpg'
+              %div.plan-season-list-body お魚レシピ
+          %li 
+            =link_to '' do
+              %div.plan-season-list__thum
+                = image_tag 'event4.jpg'
+              %div.plan-season-list-body お魚レシピ
+= render 'topviews/top-footer'

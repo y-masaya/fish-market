@@ -1,0 +1,159 @@
+.main{
+  &__body{
+    .main-image{
+      height: 350px;
+      opacity: 0.8;
+      background-image:url(https://www.owd.jp/wp-content/uploads/2018/11/ai-DSC_80102000.jpg);
+      background-size: cover;
+      text-align: center;
+      h1{
+        font-size: 55px;
+        letter-spacing: 5px;
+        color: white;
+        padding: 35px 0 0 0;
+        font-family: 'Londrina Shadow', cursive;
+      }
+      p{
+        color: white;
+        margin: 10px 0;
+        font-family: "M PLUS Rounded 1c"
+      }
+      .btn-wrapper{
+        margin: 20px 0;
+        a{
+          padding: 15px 30px;
+          color: white;
+          display: inline-block;
+          opacity: 0.9;
+          border-radius: 4px;
+          text-decoration: none;
+          &:hover{
+            opacity: 1;
+          }
+        }
+        p{
+          color: white;
+          font-size: 1.3rem;
+          font-family: 'Londrina Shadow', cursive;
+        }
+        .signup{
+          background-color:#FF6666;
+        }
+        .facebook{
+          background-color: #3b5998;
+          margin-right: 10px;
+          
+        }
+        .twitter{
+          background-color: #55acee;
+        }
+      }
+    }
+    .contents{
+      height: 270px;
+      background-image:url(http://www.netyasun.com/home/bk-img/b005.gif);
+      display: flex;
+      flex-direction: row;
+      li{
+        list-style-type: none;
+        width: 25%;
+        height: 240px;
+        padding: 20px 50px 20px;
+        box-sizing: border-box;
+        &:hover{
+          opacity: 0.8;
+        }
+        a{
+          text-decoration: none;
+          color: #000000;
+          font-family: "M PLUS Rounded 1c";
+          div{
+            display: block;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+            opacity: 0.8;
+            img{
+              width: 220px;
+              height: 140px;
+              display: block;
+            }
+          }
+          .plan-season-list__thum{}
+          .plan-season-list-body{
+            background-color: #fff;
+            height: 55px;
+            text-align: center;
+            line-height: 50px;
+          }
+        }
+      }
+    }
+    .area-navi{
+      background-image:url(http://www.netyasun.com/home/bk-img/b005.gif);
+      height: 600px;
+      #map{
+        width: 700px;
+        margin: 0 auto;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+        background: #fff;
+        p{
+          font-family: 'Londrina Shadow', cursive;
+          font-size: 40px;
+          color: #20b2aa
+        }
+      }
+    }
+    .article{
+      height: 600px;
+      background-image:url(http://www.netyasun.com/home/bk-img/b005.gif);
+      .article-list{
+        .has-icon{
+          padding-left: 200px;
+          font-size: 25px;
+          font-family: "M PLUS Rounded 1c";
+          .icon{
+            position: absolute;
+            left: 170px;
+            font-size: 1.8rem;
+          }
+        }
+        .content{
+          height: 270px;
+          display: flex;
+          flex-direction: row;
+          li{
+            list-style-type: none;
+            width: 25%;
+            height: 240px;
+            padding: 20px 50px 20px;
+            box-sizing: border-box;
+            &:hover{
+              opacity: 0.8;
+            }
+            a{
+              text-decoration: none;
+              color: #000000;
+              font-family: "M PLUS Rounded 1c";
+              div{
+                display: block;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+                opacity: 0.8;
+                img{
+                  width: 220px;
+                  height: 140px;
+                  display: block;
+                }
+              }
+              .plan-season-list__thum{}
+              .plan-season-list-body{
+                background-color: #fff;
+                height: 55px;
+                text-align: center;
+                line-height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
