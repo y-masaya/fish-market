@@ -1,0 +1,29 @@
+.conteiner{
+  text-align: center;
+  height: 583px;
+  .h2{
+    margin: 10px  0px 40px;
+    font-size: 40px;
+    font-family: 'Londrina Shadow', cursive;
+  }
+  .new_user{
+    .field{
+      height: 100px;
+    }
+    input{
+      height: 40px;
+      width: 300px;
+      border-radius: 3px;
+      background-color: #EEEEEE;
+    }
+    #user_remember_me{
+      width: 30px;
+      height: 20px;
+    }
+    .actions{
+      input{
+        background-color: #3CB371;
+      }
+    }
+  }
+}
