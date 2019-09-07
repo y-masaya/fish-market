@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190831123655) do
+ActiveRecord::Schema.define(version: 20190907103342) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20190831123655) do
     t.integer  "prefecture_id",               null: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "area_id"
+    t.index ["area_id"], name: "index_markets_on_area_id", using: :btree
     t.index ["prefecture_id"], name: "index_markets_on_prefecture_id", using: :btree
   end
 
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 20190831123655) do
 
   add_foreign_key "market_comments", "markets"
   add_foreign_key "market_comments", "users"
+  add_foreign_key "markets", "areas"
   add_foreign_key "markets", "prefectures"
   add_foreign_key "prefectures", "areas"
 end

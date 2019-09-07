@@ -14,18 +14,18 @@ $(function(){
 		{"code":10 , "name":"沖縄地方",   "color":"#ea89c4", "hoverColor":"#fdcae9", "prefectures":[47]}
 	];
 
-	// var areaLinks = {
-	// 	"北海道地方" : "/prefecture/hokkaido_area",
-	// 	"東北地方" : "/prefecture/tohoku_area",
-	// 	"関東地方" : "/prefecture/kanto_area",
-	// 	"北陸・甲信越地方" : "/prefecture/hokuriku_area",
-	// 	"東海地方" : "/prefecture/tokai_area",
-	// 	"近畿地方" : "/prefecture/kinki_area",
-	// 	"中国地方" : "/prefecture/tyugoku_area",
-	// 	"四国地方" : "/prefecture/shikoku_area",
-	// 	"九州地方" : "/prefecture/kyusyu_area",
-	// 	"沖縄地方" : "/prefecture/okinawa_area",
-	// };
+	var areaLinks = {
+		"北海道地方" : "/areas/1",
+		"東北地方" : "/areas/2",
+		"関東地方" : "/areas/4",
+		"北陸・甲信越地方" : "/areas/3",
+		"東海地方" : "/areas/5",
+		"近畿地方" : "/areas/6",
+		"中国地方" : "/areas/7",
+		"四国地方" : "/areas/8",
+		"九州地方" : "/areas/9",
+		"沖縄地方" : "/areas/10",
+	};
  
 	$("#map").japanMap(
 		{
@@ -43,10 +43,10 @@ $(function(){
 			fontColor : "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
 			fontShadowColor : "black", //地図に表示する文字の影の色
 
-			// onSelect:function(data){ //選択範囲をクリックしたときに実行
-			// 	console.log(data)
-			// 	location.href = areaLinks[data.area.name];
-			// }
+			onSelect:function(data){ //選択範囲をクリックしたときに実行
+				console.log(data)
+				location.href = areaLinks[data.area.name];
+			}
 		}
 	);
 });

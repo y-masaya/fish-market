@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   root "topviews#index"
 
   resources :topviews, only: [:index]
+
+  resources :areas do
+    resources :prefectures
+  end
 end

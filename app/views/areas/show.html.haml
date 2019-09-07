@@ -1,0 +1,18 @@
+.prefecture-header
+  %h1 
+    =  @areas.name
+.prefecture-main
+  - @prefectures.zip(@markets) do |prefecture, name|
+    .prefecture-main__box
+      .prefecture-main__box--area 
+        = prefecture.name
+      .prefecture-main__box--info
+        .prefecture-main__box--info__list
+          %li
+            = link_to "" , class: "notification-link" do
+              %figure
+                = image_tag "hokkaido.png"
+              .notification
+                .notification__info
+                  = name.name 
+              = fa_icon "angle-right"
